@@ -6,6 +6,7 @@ import SearchPage from './Pages/Search';
 import DetailPage from './Pages/Details';
 import HomePage from './Pages/Home';
 import { CustomFetch } from './Api/UseCustomFetch';
+import ErrorPage from './Pages/ErrorPage';
 
 
 
@@ -14,7 +15,7 @@ import { CustomFetch } from './Api/UseCustomFetch';
 const router = createBrowserRouter([
   {
     path: "/", element: <Root/>,
-    errorElement: '',
+    errorElement: <ErrorPage/>,
     children:[
       {index:true, element:<HomePage/>},
       {path: "/search/:id", element:<SearchPage/>},
